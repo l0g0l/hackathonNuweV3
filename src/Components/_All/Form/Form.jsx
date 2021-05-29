@@ -26,25 +26,30 @@ export default function Form() {
     }
 
     return (
-        <div className="form-container">
+     <>
             <div>
-                <form className="form-div" onSubmit={handleSubmit(onSubmit)}>
-
+                <form className="form" onSubmit={handleSubmit(onSubmit)}>
+                    <div className="formdiv-input">
                     <input
                         type="text"
                         name="Nombre"
-                        className="form-div-btnuser"
+                        className="form-div-input"
                         autoFocus
                         placeholder="Usuario GitHub"
                         {...register("usuario", { required: true })} />
                     {errors.name?.type === 'required' && "Debe introducir su usuario de GitHub"}
 
+                    </div>
+
+                    <div className="formdiv-btn">
                     <input className="form-div-btn" type="submit" value="Search" />
+
+                    </div>
 
                 </form>
             </div>
-            <Table apidata={repos}/>
+            <Table apidata={repos} />
 
-        </div>
+       </>
     );
 }

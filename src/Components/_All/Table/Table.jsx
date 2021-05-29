@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 
+//pasamos por props los datos de la API
 const Table = (props) => {
     console.log(props)
 
     return (
+    // mapeamos para conseguir que nos pinte una tabla por cada uno de los repos que contenga
+
         <div>
-       <div className="tablecontainer">
+            <div className="tablecontainer">
                 {props.apidata.map((item) => (
                     <>
                         <table>
@@ -21,9 +24,7 @@ const Table = (props) => {
                 ))
 
                 }
-            </div> 
-
-
+            </div>
 
         </div>
     )

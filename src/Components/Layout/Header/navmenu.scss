@@ -1,0 +1,19 @@
+
+.navclass {
+  padding: 10px;
+  background-color: #b67162;
+  
+}
+.header {
+  &-list {
+    display: flex;
+    
+    &-li {
+      margin: 0 10px;
+    }
+  }
+}
+
+img {
+  width: 8%;
+}
