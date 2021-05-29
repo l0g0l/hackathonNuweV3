@@ -28,7 +28,16 @@ export default function Form() {
     }
 
     return (
-     <><Card apidata={repos} />
+     <>
+                {repos.map((item) => (
+                    <>
+                      <Card apidata={item} />  
+                    </>
+
+                ))
+
+                }
+            
             <div className="form-container">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                     <div className="formdiv-input">
