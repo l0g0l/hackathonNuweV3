@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hackathonnuwev3/static/css/main.0cf1cf9e.chunk.css",
+    "main.js": "/hackathonnuwev3/static/js/main.d826edd9.chunk.js",
+    "main.js.map": "/hackathonnuwev3/static/js/main.d826edd9.chunk.js.map",
+    "runtime-main.js": "/hackathonnuwev3/static/js/runtime-main.1ef5ff65.js",
+    "runtime-main.js.map": "/hackathonnuwev3/static/js/runtime-main.1ef5ff65.js.map",
+    "static/js/2.c34f6bdb.chunk.js": "/hackathonnuwev3/static/js/2.c34f6bdb.chunk.js",
+    "static/js/2.c34f6bdb.chunk.js.map": "/hackathonnuwev3/static/js/2.c34f6bdb.chunk.js.map",
+    "index.html": "/hackathonnuwev3/index.html",
+    "static/css/main.0cf1cf9e.chunk.css.map": "/hackathonnuwev3/static/css/main.0cf1cf9e.chunk.css.map",
+    "static/js/2.c34f6bdb.chunk.js.LICENSE.txt": "/hackathonnuwev3/static/js/2.c34f6bdb.chunk.js.LICENSE.txt",
+    "static/media/carrot.ecd1566d.svg": "/hackathonnuwev3/static/media/carrot.ecd1566d.svg",
+    "static/media/instagram.8241fd60.png": "/hackathonnuwev3/static/media/instagram.8241fd60.png",
+    "static/media/linkedin.d748a62d.png": "/hackathonnuwev3/static/media/linkedin.d748a62d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ef5ff65.js",
+    "static/js/2.c34f6bdb.chunk.js",
+    "static/css/main.0cf1cf9e.chunk.css",
+    "static/js/main.d826edd9.chunk.js"
+  ]
+}
