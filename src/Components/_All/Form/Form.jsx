@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'; //Libería de React para la creación y validación de formularios
 import axios from 'axios'; // solicitudes http a una API
 import Table from '../Table/Table'
+import Card from '../../_Reusable/Card/Card';
+
 
 import './form.scss';
 
@@ -26,7 +28,7 @@ export default function Form() {
     }
 
     return (
-     <>
+     <><Card apidata={repos} />
             <div className="form-container">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                     <div className="formdiv-input">

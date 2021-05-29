@@ -4,8 +4,8 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
-
-import AuthService from "../../Services/auth.service";
+var crypto = require('crypto');
+//import AuthService from "../../Services/auth.service";
 
 const required = (value) => {
     if (!value) {
@@ -52,7 +52,7 @@ const Register = (props) => {
     const checkBtn = useRef();
 
     const [name, setName] = useState("");
-      const [email, setEmail] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [successful, setSuccessful] = useState(false);
     const [message, setMessage] = useState("");
@@ -81,7 +81,17 @@ const Register = (props) => {
         form.current.validateAll();
 
         if (checkBtn.current.context._errors.length === 0) {
-            AuthService.register(name, email, password).then(
+            if (localStorage.getItem(`nuwe_auth__${email}`) !== null) {
+                setMessage('Usario ya registrado')
+                setSuccessful(false)
+            } else {
+                localStorage.setItem(`nuwe_auth__${email}`, crypto.createHash('sha256').update(password).digest('base64'))
+                setMessage('Usuario creado correctamente')
+                setSuccessful(true)
+            }
+            
+
+/*             AuthService.register(name, email, password).then(
                 (response) => {
                     setMessage(response.data.message);
                     setSuccessful(true);
@@ -97,7 +107,7 @@ const Register = (props) => {
                     setMessage(resMessage);
                     setSuccessful(false);
                 }
-            );
+            ); */
         }
 
     };

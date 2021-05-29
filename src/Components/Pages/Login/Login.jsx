@@ -4,9 +4,9 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 // import StarRating from "../../-Reusable/StarRating/StarRating";
+var crypto = require('crypto');
 
-
-import AuthService from "../../Services/auth.service";
+//import AuthService from "../../Services/auth.service";
 
 
 
@@ -48,7 +48,20 @@ const Login = (props) => {
         form.current.validateAll();
 
         if (checkBtn.current.context._errors.length === 0) {
-            AuthService.login(email, password)
+            if (localStorage.getItem(`nuwe_auth__${email}`) !== null) {
+                const password_hash = crypto.createHash('sha256').update(password).digest('base64')
+                if (localStorage.getItem(`nuwe_auth__${email}`) == password_hash) {
+                    props.history.push("/home");
+                    window.location.reload();
+                } else {
+                    setLoading(false);
+                    setMessage('Usuario o contraseña incorrectos');
+                }
+            } else {
+                setLoading(false);
+                setMessage('Usuario o contraseña incorrectos');
+            }
+/*             AuthService.login(email, password)
                 .then(() => {
                     props.history.push("/home");
                     window.location.reload();
@@ -64,7 +77,7 @@ const Login = (props) => {
                         setLoading(false);
                         setMessage(resMessage);
                     }
-                );
+                ); */
         } else {
             setLoading(false);
         }
