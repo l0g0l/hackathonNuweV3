@@ -29,14 +29,7 @@ export default function Form() {
 
     return (
      <>
-                {repos.map((item) => (
-                    <>
-                      <Card apidata={item} />  
-                    </>
-
-                ))
-
-                }
+            
             
             <div className="form-container">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -58,8 +51,16 @@ export default function Form() {
                     </div>
 
                 </form>
+
             </div>
-            <Table apidata={repos} />
+               {repos.map((item) => (
+                    <>
+                      <Card apidata={item} />  
+                    </>
+
+                ))
+
+                }
 
        </>
     );

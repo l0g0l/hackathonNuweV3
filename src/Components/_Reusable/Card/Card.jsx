@@ -12,8 +12,8 @@ const Card = (props) => {
                     <img src={carrot} alt="carrot" />
                 </div>
                 <div className="card txt">
-                    <p>Username {props.apidata.name}</p>
-                    <p>Repositories: {props.apidata.id}</p>
+                    <p>Repository Name: {props.apidata.name}</p>
+                    <p>Repository id: {props.apidata.id}</p>
                 </div>
 
             </div>
