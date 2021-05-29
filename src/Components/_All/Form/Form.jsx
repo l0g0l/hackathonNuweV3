@@ -27,7 +27,7 @@ export default function Form() {
 
     return (
      <>
-            <div>
+            <div className="form-container">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                     <div className="formdiv-input">
                     <input

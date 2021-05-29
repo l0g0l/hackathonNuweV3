@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-container">
             <div class="footer">
                 
-                <span class="acronym">Mi primera Hackathone hecha con</span>
+                <span class="footer-txt">Mi primer <i>Hackathon</i> hecho con mucho</span>
                 <a class="heart" href="#">♥︎</a>
             </div>
        </div>

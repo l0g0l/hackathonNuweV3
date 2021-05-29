@@ -13,7 +13,7 @@ const Routes = () => {
                 <Route path='/signup' component={SignUp}></Route>
                 <Layout>
 
-                    <Route path="/" component={Home}></Route>
+                    <Route path="/home" component={Home}></Route>
 
                 </Layout>
             </Switch>
